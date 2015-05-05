@@ -1,0 +1,20 @@
+{
+  "name": "mini-view",
+  "version": "1.0.0",
+  "description": "a simple function for creating views",
+  "main": "app.js",
+  "scripts": {
+    "list-items": "browserify examples/list-items/app.js -dt babelify --outfile examples/list-items/bundle.js",
+    "start": "npm i && npm run list-items"
+  },
+  "author": "Benjamin P. Verble <bvrider@gmail.com> (https://github.com/BenjaminVerble)",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/BenjaminVerble/mini-view"
+  },
+  "devDependencies": {
+    "babelify": "^6.0.2",
+    "browserify": "^10.1.0"
+  }
+}
