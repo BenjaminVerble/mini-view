@@ -5,6 +5,7 @@
   "main": "app.js",
   "scripts": {
     "list-items": "browserify examples/list-items/app.js -dt babelify --outfile examples/list-items/bundle.js",
+    "wfy": "watchify examples/list-items/app.js -dt babelify --outfile examples/list-items/bundle.js",
     "start": "npm i && npm run list-items"
   },
   "author": "Benjamin P. Verble <bvrider@gmail.com> (https://github.com/BenjaminVerble)",

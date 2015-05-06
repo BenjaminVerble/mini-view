@@ -51,6 +51,11 @@ function createView(opts) {
     var templateFunc;
 
     if (!templateFunc) {
+        /*
+            pre-load string template as argument before calling function with data
+            see section titled "Partial Functions" here: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/bind
+            Perhaps I should use currying instead? Performance?
+        */
         templateFunc = interpolate.bind(undefined, opts.template);
         createView.cache[opts.template] = templateFunc;
     }

@@ -1,4 +1,4 @@
-var createView = require('../../index');
+var createView = require("../../index");
 
 var people = [
     {name: 'Bart'},
