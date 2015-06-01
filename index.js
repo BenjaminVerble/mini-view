@@ -48,17 +48,7 @@ function createView(opts) {
         throw new Error('createView: an options object with a template property (string) must be provided when calling createView');
     }
 
-    var templateFunc;
-
-    if (!templateFunc) {
-        /*
-            pre-load string template as argument before calling function with data
-            see section titled "Partial Functions" here: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/bind
-            Perhaps I should use currying instead? Performance?
-        */
-        templateFunc = interpolate.bind(undefined, opts.template);
-        createView.cache[opts.template] = templateFunc;
-    }
+    var templateFunc = interpolate.bind(undefined, opts.template);
 
     var $tempEl = document.createElement('div');
 
