@@ -48,11 +48,9 @@ function createView(opts) {
         throw new Error('createView: an options object with a template property (string) must be provided when calling createView');
     }
 
-    var templateFunc = interpolate.bind(undefined, opts.template);
-
     var $tempEl = document.createElement('div');
 
-    $tempEl.innerHTML = templateFunc(opts.context);
+    $tempEl.innerHTML = interpolate(opts.template, opts.context);
 
     view.$el = $tempEl.children[0];
 
