@@ -1,4 +1,4 @@
-**WORK IN PROGRESS**
+**NO MAINTENANCE INTENDED**
 
 # mini-view
 a simple function for creating views
